@@ -1,0 +1,7 @@
+[user]
+	email = chris.game@robbiebobbins.com
+	name = The Game
+[alias]
+	s = status
+	co = checkout
+	b = branch
