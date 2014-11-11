@@ -71,6 +71,8 @@ let g:tmuxline_preset = {
       \'options' : {'status-justify' : 'left'}
       \}
 
+Bundle 'rking/ag.vim'
+
 Bundle  'kien/rainbow_parentheses.vim'
 Bundle 'godlygeek/tabular'
 "autocmd VimEnter * RainbowParenthesesToggle
