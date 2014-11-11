@@ -72,6 +72,9 @@ let g:tmuxline_preset = {
       \}
 
 Bundle 'rking/ag.vim'
+Bundle 'ntpeters/vim-better-whitespace'
+let g:strip_whitespace_on_save = 1
+let g:better_whitespace_enabled = 1
 
 Bundle  'kien/rainbow_parentheses.vim'
 Bundle 'godlygeek/tabular'
