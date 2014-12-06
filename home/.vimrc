@@ -25,6 +25,7 @@ Bundle 'tpope/vim-repeat'
 map ,p :NERDTreeToggle<CR>
 Bundle 'kien/ctrlp.vim'
 map ,b :CtrlPBuffer<CR>
+Bundle 'nono/vim-handlebars'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-endwise'
