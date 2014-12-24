@@ -1,0 +1,47 @@
+installTmux
+installZsh
+generateSshKey
+installRvm
+installNvm
+installTheSilverSearcher
+
+/*UI*/
+installFonts
+importTerminalColourScheme
+
+def installTmux
+  `brew install tmux` unless system 'which tmux'
+end
+
+def installZsh
+  `brew install zsh` unless system 'which zsh'
+end
+
+def generateSshKey
+  /*https://help.github.com/articles/generating-ssh-keys/*/
+  `ssh-add ~/.ssh/id_rsa` unless system 'cat ~/.ssh/id_rsa'
+end
+
+def installRvm
+  /*http://rvm.io/rvm/install*/
+  curl -sSL https://get.rvm.io | bash -s stable --ruby unless system 'which rvm'
+end
+
+def installNvm
+
+end
+
+def installTheSilverSearcher
+  `brew install xz && git clone https://github.com/ggreer/the_silver_searcher ag && cd ag && ./build.sh && sudo make install` unless system 'which ag'
+end
+
+def installFonts
+  /*Download fonts from*/
+  /*https://github.com/Lokaltog/powerline-fonts/tree/master/SourceCodePro*/
+  /*you might need to copy them manually to /Library/Fonts and your name/Library/Fonts*/
+end
+
+def importTerminalColourScheme
+  /*~/jellybeans.terminal*/
+  /*Import profile in to terminal    */
+end
