@@ -1,4 +1,6 @@
-#Installation
+#Installation on OSX 10.10 Yosemite
+
+curl -sSL https://get.rvm.io | bash -s stable
 
 cd ~
 
