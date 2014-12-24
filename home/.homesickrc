@@ -1,3 +1,4 @@
+installVundler
 installTmux
 installZsh
 generateSshKey
@@ -8,6 +9,10 @@ installTheSilverSearcher
 /*UI*/
 installFonts
 importTerminalColourScheme
+
+def installVundler
+  `git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
+end
 
 def installTmux
   `brew install tmux` unless system 'which tmux'
