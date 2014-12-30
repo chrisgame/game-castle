@@ -1,15 +1,3 @@
-installVundler
-installTmux
-installZsh
-generateSshKey
-installRvm
-installNvm
-installTheSilverSearcher
-
-#UI
-installFonts
-importTerminalColourScheme
-
 def installVundler
   `git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
 end
@@ -50,3 +38,16 @@ def importTerminalColourScheme
   #~/jellybeans.terminal
   #Import profile in to terminal
 end
+
+installVundler
+installTmux
+installZsh
+generateSshKey
+installRvm
+installNvm
+installTheSilverSearcher
+
+#UI
+installFonts
+importTerminalColourScheme
+
