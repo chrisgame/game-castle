@@ -29,7 +29,7 @@ end
 
 def installRvm
   #http://rvm.io/rvm/install
-  curl -sSL https://get.rvm.io | bash -s stable --ruby unless system 'which rvm'
+  `curl -sSL https://get.rvm.io | bash -s stable --ruby` unless system 'which rvm'
 end
 
 def installNvm
