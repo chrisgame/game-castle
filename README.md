@@ -33,6 +33,11 @@ homesick clone chrisgame/dotfiles
 homesick symlink dotfiles
 ```
 
+Install any missing dependencies
+```
+homesick rc game-castle
+```
+
 ```
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 ```
