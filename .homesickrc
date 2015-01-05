@@ -24,9 +24,11 @@ def installTheSilverSearcher
 end
 
 def installFonts
-  #Download fonts from
-  #https://github.com/Lokaltog/powerline-fonts/tree/master/SourceCodePro
-  #you might need to copy them manually to /Library/Fonts and your name/Library/Fonts
+  #https://github.com/powerline/fonts
+  `curl -LOk https://github.com/powerline/fonts/archive/master.zip`
+  `unzip "master.zip" "fonts-master/\*" -d "/Library/Fonts"`
+  `unzip "master.zip" "fonts-master/\*" -d "~/Library/Fonts"`
+  `rm master.zip`
 end
 
 installVundler
