@@ -29,11 +29,6 @@ def installFonts
   #you might need to copy them manually to /Library/Fonts and your name/Library/Fonts
 end
 
-def importTerminalColourScheme
-  #~/jellybeans.terminal
-  #Import profile in to terminal
-end
-
 installVundler
 installTmux
 installZsh
@@ -42,5 +37,3 @@ installTheSilverSearcher
 
 #UI
 installFonts
-importTerminalColourScheme
-
