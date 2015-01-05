@@ -1,13 +1,23 @@
 def installVundler
-  `git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
+  unless system 'ls ~/.vim/bundle/vundle'
+    puts 'Installing vundler'
+    `git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
+    `vim +PluginInstall +qall'
+  end
 end
 
 def installTmux
-  `brew install tmux` unless system 'which tmux'
+  unless system 'which tmux'
+    puts 'Installing tmux'
+    `brew install tmux`
+  end
 end
 
 def installZsh
-  `brew install zsh` unless system 'which zsh'
+  unless system 'which zsh'
+    puts 'Installing zsh'
+    `brew install zsh`
+  end
 end
 
 def installNvm
@@ -20,7 +30,10 @@ def installNvm
 end
 
 def installTheSilverSearcher
-  `brew install the_silver_searcher` unless system 'which ag'
+  unless system 'which ag'
+    puts 'Installing the silver searcher'
+    `brew install the_silver_searcher`
+  end
 end
 
 def installFonts

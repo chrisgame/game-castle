@@ -18,6 +18,10 @@ if everything has been successful you should get the version of RVM that has bee
 rvm -v
 ```
 
+install ruby
+```
+rvm install ruby
+```
 rvm will now install homebrew and prompt you for an install location. The default is fine. Enter your password when prompted.
 
 install the homesick gem
@@ -44,13 +48,5 @@ nvm install 0.10.35
 ```
 
 Open the terminal and from the Terminal menu select Preferences. Then select Profiles and then click the cog at the bottom of the window and select import. Select ~/jellybeans.terminal and then click open.
-
-```
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-```
-
-```
-vim +PluginInstall +qall
-```
 
 open vim
