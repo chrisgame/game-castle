@@ -26,8 +26,10 @@ end
 def installFonts
   #https://github.com/powerline/fonts
   unless system 'ls /Library/Fonts/SourceCodePro'
+    puts 'Installing font'
     `curl -LOk https://github.com/powerline/fonts/archive/master.zip`
-    `unzip "master.zip" "fonts-master/SourceCodePro\*" -d "/Library/Fonts"`
+    `mkdir /Library/Fonts/SourceCodePro`
+    `unzip -j "master.zip" "fonts-master/SourceCodePro\*" -d "/Library/Fonts/SourceCodePro"`
     `rm master.zip`
   end
 end
