@@ -16,7 +16,6 @@ def installNvm
     puts 'Installing nvm'
     `curl https://raw.githubusercontent.com/creationix/nvm/v0.22.0/install.sh | bash`
     `source ~/.bashrc`
-    `nvm install 0.10.35`
   end
 end
 

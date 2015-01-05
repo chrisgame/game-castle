@@ -37,6 +37,12 @@ Install any missing dependencies
 homesick rc game-castle
 ```
 
+Install the lateset version of node for example
+
+```
+nvm install 0.10.35
+```
+
 ```
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 ```
