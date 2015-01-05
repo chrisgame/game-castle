@@ -26,7 +26,7 @@ end
 def installFonts
   #https://github.com/powerline/fonts
   `curl -LOk https://github.com/powerline/fonts/archive/master.zip`
-  `unzip "master.zip" "fonts-master/\*" -d "/Library/Fonts"`
+  `sudo unzip "master.zip" "fonts-master/\*" -d "/Library/Fonts"`
   `unzip "master.zip" "fonts-master/\*" -d "~/Library/Fonts"`
   `rm master.zip`
 end
