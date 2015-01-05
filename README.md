@@ -47,6 +47,10 @@ Install the lateset version of node for example
 nvm install 0.10.35
 ```
 
-Open the terminal and from the Terminal menu select Preferences. Then select Profiles and then click the cog at the bottom of the window and select import. Select ~/jellybeans.terminal and then click open.
+Open the terminal and from the Terminal menu select Preferences. Then select Profiles and then click the cog at the bottom of the window and select import. Select
+```
+~/jellybeans.terminal
+```
+and then click open.
 
 open vim
