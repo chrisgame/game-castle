@@ -1,5 +1,8 @@
 #Installation on OSX 10.10 Yosemite
 
+create an ssh key
+follow the instructions here https://help.github.com/articles/generating-ssh-keys/
+
 install RVM
 ```
 curl -sSL https://get.rvm.io | bash -s stable --ruby
