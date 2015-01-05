@@ -10,11 +10,6 @@ def installZsh
   `brew install zsh` unless system 'which zsh'
 end
 
-def installRvm
-  #http://rvm.io/rvm/install
-  `curl -sSL https://get.rvm.io | bash -s stable --ruby` unless system 'which rvm'
-end
-
 def installNvm
 
 end
@@ -37,7 +32,6 @@ end
 installVundler
 installTmux
 installZsh
-installRvm
 installNvm
 installTheSilverSearcher
 

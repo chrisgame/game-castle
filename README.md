@@ -2,7 +2,7 @@
 
 install RVM
 ```
-curl -sSL https://get.rvm.io | bash -s stable
+curl -sSL https://get.rvm.io | bash -s stable --ruby
 ```
 
 make RVM available in all shell windows
@@ -15,10 +15,6 @@ if everything has been successful you should get the version of RVM that has bee
 rvm -v
 ```
 
-install ruby
-```
-rvm install ruby
-```
 rvm will now install homebrew and prompt you for an install location. The default is fine. Enter your password when prompted.
 
 install the homesick gem
