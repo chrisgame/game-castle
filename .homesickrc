@@ -11,7 +11,11 @@ def installZsh
 end
 
 def installNvm
-
+  #https://github.com/creationix/nvm
+  unless system 'which nvm'
+    puts 'Installing nvm'
+    `curl https://raw.githubusercontent.com/creationix/nvm/v0.22.0/install.sh | bash`
+  end
 end
 
 def installTheSilverSearcher
