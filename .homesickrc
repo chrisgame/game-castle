@@ -25,10 +25,11 @@ end
 
 def installFonts
   #https://github.com/powerline/fonts
-  `curl -LOk https://github.com/powerline/fonts/archive/master.zip`
-  `sudo unzip "master.zip" "fonts-master/\*" -d "/Library/Fonts"`
-  `unzip "master.zip" "fonts-master/\*" -d "~/Library/Fonts"`
-  `rm master.zip`
+  unless system 'ls /Library/Fonts/SourceCodePro'
+    `curl -LOk https://github.com/powerline/fonts/archive/master.zip`
+    `unzip "master.zip" "fonts-master/SourceCodePro\*" -d "/Library/Fonts"`
+    `rm master.zip`
+  end
 end
 
 installVundler
