@@ -53,12 +53,17 @@ def installFonts
   end
 end
 
+def installVimPlugins
+  `vim +PluginInstall +qall`
+end
+
 installVundler
 installTmux
 installZsh
 installOhMyZsh
 installNvm
 installTheSilverSearcher
+installVimPlugins
 
 #UI
 installFonts
