@@ -51,6 +51,6 @@ Open the terminal and from the Terminal menu select Preferences. Then select Pro
 ```
 ~/jellybeans.terminal
 ```
-and then click open.
+and then click open. Then click the default button in the bottom right of the left hand pane.
 
 open vim
