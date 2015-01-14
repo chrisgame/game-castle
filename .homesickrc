@@ -2,7 +2,7 @@ def installVundler
   unless system 'ls ~/.vim/bundle/vundle'
     puts 'Installing vundler'
     `git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
-    `vim +PluginInstall +qall'
+    `vim +PluginInstall +qall`
   end
 end
 
@@ -17,6 +17,13 @@ def installZsh
   unless system 'which zsh'
     puts 'Installing zsh'
     `brew install zsh`
+  end
+end
+
+def installOhMyZsh
+  unless system 'ls ~/.oh-my-zsh'
+    puts 'Installing oh-my-zsh'
+    `curl -L http://install.ohmyz.sh | sh`
   end
 end
 
@@ -49,6 +56,7 @@ end
 installVundler
 installTmux
 installZsh
+installOhMyZsh
 installNvm
 installTheSilverSearcher
 
