@@ -29,11 +29,11 @@ install the homesick gem
 gem install homesick
 ```
 ```
-homesick clone chrisgame/dotfiles
+homesick clone chrisgame/game-castle
 ```
 
 ```
-homesick symlink dotfiles
+homesick symlink game-castle
 ```
 
 Install any missing dependencies
