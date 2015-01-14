@@ -29,7 +29,7 @@ end
 
 def installNvm
   #https://github.com/creationix/nvm
-  unless system 'which nvm'
+  unless system 'brew --prefix nvm'
     puts 'Installing nvm'
     `brew install nvm`
     `source ~/.bashrc`
