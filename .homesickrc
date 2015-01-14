@@ -32,7 +32,7 @@ def installNvm
   unless system 'brew --prefix nvm'
     puts 'Installing nvm'
     `brew install nvm`
-    `source ~/.bashrc`
+    `source ~/.bash_profile`
   end
 end
 
