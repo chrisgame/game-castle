@@ -21,6 +21,7 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'kien/ctrlp.vim'
