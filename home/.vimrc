@@ -20,9 +20,9 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
+map <C-n> :NERDTreeToggle<CR>
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
-map ,p :NERDTreeToggle<CR>
 Bundle 'kien/ctrlp.vim'
 map ,b :CtrlPBuffer<CR>
 Bundle 'nono/vim-handlebars'
