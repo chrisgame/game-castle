@@ -3,6 +3,11 @@
 create an ssh key
 follow the instructions here https://help.github.com/articles/generating-ssh-keys/
 
+install Homebrew
+```
+curl -sSL https://get.rvm.io | bash -s stable --ruby
+```
+
 install RVM
 ```
 curl -sSL https://get.rvm.io | bash -s stable --ruby
