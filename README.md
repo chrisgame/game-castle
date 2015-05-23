@@ -5,7 +5,7 @@ follow the instructions here https://help.github.com/articles/generating-ssh-key
 
 install Homebrew
 ```
-curl -sSL https://get.rvm.io | bash -s stable --ruby
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 install RVM
@@ -51,5 +51,6 @@ Open the terminal and from the Terminal menu select Preferences. Then select Pro
 ~/jellybeans.terminal
 ```
 and then click open. Then click the default button in the bottom right of the left hand pane.
+
 
 open vim
