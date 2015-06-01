@@ -44,7 +44,6 @@ Bundle 'itchyny/lightline.vim'
 Bundle 'edkolev/tmuxline.vim'
 Bundle 'edkolev/promptline.vim'
 
-let g:airline_enable_fugitive = 1
 let g:airline_section_c = '%f'
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'wombat'
