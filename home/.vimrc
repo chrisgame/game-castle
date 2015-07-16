@@ -27,7 +27,8 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'kien/ctrlp.vim'
 map ,b :CtrlPBuffer<CR>
-Bundle 'nono/vim-handlebars'
+Bundle 'mustache/vim-mustache-handlebars'
+let mustache_abbreviations=1
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-endwise'
@@ -43,6 +44,8 @@ Bundle 'bling/vim-airline'
 Bundle 'itchyny/lightline.vim'
 Bundle 'edkolev/tmuxline.vim'
 Bundle 'edkolev/promptline.vim'
+Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'horace0422/ZoomWin'
 
 let g:airline_section_c = '%f'
 let g:airline_powerline_fonts = 1
@@ -334,6 +337,8 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
+nnoremap <leader>k :bnext<CR>
+nnoremap <leader>l :bprevious<CR>
 
 " Controversial...swap colon and semicolon for easier commands
 "nnoremap ; :

@@ -2,10 +2,27 @@
 	email = chris.game@robbiebobbins.com
 	name = The Game
 [alias]
-	s = status
-	co = checkout
-	b = branch
+  a = add
+  aa = add .
+  co = checkout
+  ci = commit
+  cim = commit -m
+  ca = commit -a --amend
+  rc = rebase --continue
+  rh = "!f() { git rebase -i HEAD~$1; }; f"
+  p = push
+  pf = push -f
+  pu = push --set-upstream origin
+  df = diff
+  s = status
+  st = status --short --branch
+  b = branch
+  newb = checkout -b
+  plum = pull upstream master
+  rum = pull --rebase upstream master
+  rom = pull --rebase origin master
+  l = log --pretty=format:"%C(green)%h%C(bold)%d\\ %Creset%s%C(white)\\ [%cn]" --decorate --numstat
   # Log display from screencast, with train tracks.
-  l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+  lg = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
   # Alternate log display from Scott Chacon
   lol = log --pretty=oneline --abbrev-commit --graph --decorate
