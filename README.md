@@ -3,6 +3,11 @@
 create an ssh key
 follow the instructions here https://help.github.com/articles/generating-ssh-keys/
 
+install OSX commandline tools
+```
+xcode-select --install
+```
+
 install Homebrew
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
