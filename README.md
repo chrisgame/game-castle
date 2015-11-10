@@ -57,4 +57,4 @@ Install the lateset version of node for example
 nvm install 0.12.7
 ```
 
-open vim
+close and then reopen the terminal and then open vim
