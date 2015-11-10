@@ -40,6 +40,12 @@ homesick clone chrisgame/game-castle
 homesick symlink game-castle
 ```
 
+Open the terminal and from the Terminal menu select Preferences. Then select Profiles and then click the cog at the bottom of the window and select import. Select
+```
+~/jellybeans.terminal
+```
+and then click open. Then click the default button in the bottom right of the left hand pane.
+
 Install any missing dependencies
 ```
 homesick rc game-castle
@@ -48,14 +54,7 @@ homesick rc game-castle
 Install the lateset version of node for example
 
 ```
-nvm install 0.10.35
+nvm install 0.12.7
 ```
-
-Open the terminal and from the Terminal menu select Preferences. Then select Profiles and then click the cog at the bottom of the window and select import. Select
-```
-~/jellybeans.terminal
-```
-and then click open. Then click the default button in the bottom right of the left hand pane.
-
 
 open vim
