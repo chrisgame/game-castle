@@ -83,7 +83,7 @@ export PATH="/Users/chris/.rvm/gems/ruby-2.1.2/bin:/Users/chris/.rvm/gems/ruby-2
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vi="/usr/local/Cellar/vim/7.4.903/bin/vim"
+alias vi="/usr/local/Cellar/vim/8.0.0124/bin/vim"
 #alias nom="rm -rf node_modules && npm cache clean && npm install"
 #alias nombom="rm -rf node_modules bower_components dist tmp && npm cache clean && npm install && bower install"
 ###
@@ -166,3 +166,5 @@ nombom() {
 
 # added by travis gem
 [ -f /Users/chris/.travis/travis.sh ] && source /Users/chris/.travis/travis.sh
+
+export PATH="$HOME/.yarn/bin:$PATH"

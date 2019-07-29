@@ -27,3 +27,5 @@
   # Alternate log display from Scott Chacon
   lol = log --pretty=oneline --abbrev-commit --graph --decorate
   f = commit --amend --reset-author --no-edit
+[merge]
+	tool = vimdiff
