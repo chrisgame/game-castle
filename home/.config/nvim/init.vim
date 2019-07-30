@@ -48,6 +48,13 @@ Bundle 'edkolev/tmuxline.vim'
 Bundle 'edkolev/promptline.vim'
 
 call vundle#end()
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+call plug#end()
+
 filetype plugin indent on  " allows auto-indenting depending on file type
 
 let mapleader = ","
@@ -293,6 +300,8 @@ endfunction
 nnoremap <leader>b :call SelectaBuffer()<cr>
 " xxx selecta xxx "
 
+" deoplete
+let g:deoplete#enable_at_startup = 1
 
 " vim/tmux/terminal status bar visual tweeks
 let g:promptline_preset = {
