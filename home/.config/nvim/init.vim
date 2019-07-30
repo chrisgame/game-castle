@@ -46,6 +46,7 @@ Bundle 'bling/vim-airline'
 Bundle 'itchyny/lightline.vim'
 Bundle 'edkolev/tmuxline.vim'
 Bundle 'edkolev/promptline.vim'
+Bundle 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 
