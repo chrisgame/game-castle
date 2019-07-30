@@ -53,6 +53,7 @@ call vundle#end()
 call plug#begin('~/.vim/plugged')
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'srstevenson/vim-picker'
 
 call plug#end()
 
@@ -115,8 +116,8 @@ colorscheme jellybeans
   map <leader>tl :tablast<cr>
   map <leader>tm :tabmove
 
-  " Spell checking with ,s
-  nmap <silent> <leader>s :set spell!<CR>
+  " Spell checking with ,c
+  nmap <silent> <leader>c :set spell!<CR>
   " Set region to British English
   set spelllang=en_gb
 
@@ -271,35 +272,8 @@ au Syntax * RainbowParenthesesLoadBraces
 " ember specifics
 let mustache_abbreviations=1
 
-" selecta
-" Run a given vim command on the results of fuzzy selecting from a given shell
-" command. See usage below.
-function! SelectaCommand(choice_command, selecta_args, vim_command)
- try
-   let selection = system(a:choice_command . " | selecta " . a:selecta_args)
- catch /Vim:Interrupt/
-   " Swallow the ^C so that the redraw below happens; otherwise there will be
-   " leftovers from selecta on the screen
-   redraw!
-   return
- endtry
- redraw!
- exec a:vim_command . " " . selection
-endfunction
-
-" Find all files in all non-dot directories starting in the working directory.
-" Fuzzy select one of those. Open the selected file with :e.
-nnoremap <leader>s :call SelectaCommand("ag -l", "", ":e")<cr>
-
-function! SelectaBuffer()
-  let bufnrs = filter(range(1, bufnr("$")), 'buflisted(v:val)')
-  let buffers = map(bufnrs, 'bufname(v:val)')
-  call SelectaCommand('echo "' . join(buffers, "\n") . '"', "", ":b")
-endfunction
-
-" Fuzzy select a buffer. Open the selected buffer with :b.
-nnoremap <leader>b :call SelectaBuffer()<cr>
-" xxx selecta xxx "
+" vim-picker
+nmap <unique> <leader>s <Plug>(PickerEdit)
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
