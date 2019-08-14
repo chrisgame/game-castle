@@ -277,6 +277,7 @@ nmap <unique> <leader>s <Plug>(PickerEdit)
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " vim/tmux/terminal status bar visual tweeks
 let g:promptline_preset = {
