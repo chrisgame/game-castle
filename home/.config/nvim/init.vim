@@ -131,6 +131,11 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
+" better-whitespace options
+let g:strip_whitespace_on_save = 1
+let g:better_whitespace_enabled = 1
+let g:strip_whitespace_confirm = 0
+
 " NERDTree
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
