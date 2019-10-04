@@ -1,56 +1,46 @@
 filetype off                   " required
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.config/nvim/bundle/Vundle.vim
-call vundle#begin('~/.config/nvim/bundle')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-Bundle 'gmarik/vundle'
-
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdtree'
-map <C-f> :NERDTreeFind<CR>
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-projectionist'
-Bundle 'christoomey/vim-tmux-navigator'
-map ,b :CtrlPBuffer<CR>
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'rking/ag.vim'
-Bundle 'ntpeters/vim-better-whitespace'
-Bundle  'kien/rainbow_parentheses.vim'
-
-Bundle 'tpope/vim-markdown'
-
-" ember specifics
-Bundle 'mustache/vim-mustache-handlebars'
-
-" ruby and/or rails specifics
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-rake'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-bundler'
-
-" elm specifics
-Bundle 'lambdatoast/elm.vim'
-
-" vim/tmux/terminal status bar visual tweeks
-Bundle 'bling/vim-airline'
-Bundle 'itchyny/lightline.vim'
-Bundle 'edkolev/tmuxline.vim'
-Bundle 'edkolev/promptline.vim'
-Bundle 'vim-airline/vim-airline-themes'
-
-call vundle#end()
 
 call plug#begin('~/.vim/plugged')
+
+Plug 'altercation/vim-colors-solarized'
+Plug 'nanotech/jellybeans.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+map <C-f> :NERDTreeFind<CR>
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'scrooloose/nerdcommenter'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-projectionist'
+Plug 'christoomey/vim-tmux-navigator'
+map ,b :CtrlPBuffer<CR>
+Plug 'terryma/vim-multiple-cursors'
+Plug 'rking/ag.vim'
+Plug 'ntpeters/vim-better-whitespace'
+Plug  'kien/rainbow_parentheses.vim'
+
+Plug 'tpope/vim-markdown'
+
+" ember specifics
+Plug 'mustache/vim-mustache-handlebars'
+
+" ruby and/or rails specifics
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rake'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-haml'
+Plug 'tpope/vim-cucumber'
+Plug 'tpope/vim-bundler'
+
+" elm specifics
+Plug 'lambdatoast/elm.vim'
+
+" vim/tmux/terminal status bar visual tweeks
+Plug 'bling/vim-airline'
+Plug 'itchyny/lightline.vim'
+Plug 'edkolev/tmuxline.vim'
+Plug 'edkolev/promptline.vim'
+Plug 'vim-airline/vim-airline-themes'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'srstevenson/vim-picker'
@@ -364,4 +354,3 @@ let g:tmuxline_preset = {
       \'z'    : '%R',
       \'options' : {'status-justify' : 'left'}
       \}
-
