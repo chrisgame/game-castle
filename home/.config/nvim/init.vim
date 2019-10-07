@@ -22,7 +22,7 @@ Plug  'kien/rainbow_parentheses.vim'
 Plug 'tpope/vim-markdown'
 
 " ember specifics
-Plug 'mustache/vim-mustache-handlebars'
+Plug 'joukevandermaas/vim-ember-hbs'
 
 " ruby and/or rails specifics
 Plug 'tpope/vim-rails'
