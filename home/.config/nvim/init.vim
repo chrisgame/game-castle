@@ -23,6 +23,7 @@ Plug 'tpope/vim-markdown'
 
 " ember specifics
 Plug 'joukevandermaas/vim-ember-hbs'
+Plug 'nullvoxpopuli/coc-ember', {'do': 'yarn install --frozen-lockfile'}
 
 " ruby and/or rails specifics
 Plug 'tpope/vim-rails'
@@ -132,6 +133,17 @@ let NERDTreeShowHidden=1
 let g:airline_section_c = '%f'
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'wombat'
+
+" Completion config
+let g:coc_global_extensions = [
+  \ 'coc-tsserver',
+  \ 'coc-css',
+  \ 'coc-json',
+  \ 'coc-html',
+  \ 'coc-vimlsp',
+  \ 'coc-highlight',
+  \ 'coc-ember'
+  \ ]
 
 " Projectionist
 nnoremap <leader>k :bnext<CR>
