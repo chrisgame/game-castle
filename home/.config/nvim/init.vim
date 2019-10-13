@@ -21,6 +21,9 @@ Plug  'kien/rainbow_parentheses.vim'
 
 Plug 'tpope/vim-markdown'
 
+" linting
+Plug 'dense-analysis/ale'
+
 " ember specifics
 Plug 'joukevandermaas/vim-ember-hbs'
 Plug 'nullvoxpopuli/coc-ember', {'do': 'yarn install --frozen-lockfile'}
@@ -138,6 +141,7 @@ let g:airline_theme = 'wombat'
 let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-css',
+  \ 'coc-eslint',
   \ 'coc-json',
   \ 'coc-html',
   \ 'coc-vimlsp',
