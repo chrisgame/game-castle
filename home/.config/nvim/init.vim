@@ -10,16 +10,12 @@ map <C-f> :NERDTreeFind<CR>
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'scrooloose/nerdcommenter'
-Plug 'kien/ctrlp.vim'
-Plug 'tpope/vim-projectionist'
 Plug 'christoomey/vim-tmux-navigator'
 map ,b :CtrlPBuffer<CR>
 Plug 'terryma/vim-multiple-cursors'
 Plug 'rking/ag.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug  'kien/rainbow_parentheses.vim'
-
-Plug 'tpope/vim-markdown'
 
 " linting
 Plug 'dense-analysis/ale'
@@ -39,6 +35,9 @@ Plug 'tpope/vim-bundler'
 " elm specifics
 Plug 'lambdatoast/elm.vim'
 
+" markdown specifics
+Plug 'tpope/vim-markdown'
+
 " vim/tmux/terminal status bar visual tweeks
 Plug 'bling/vim-airline'
 Plug 'itchyny/lightline.vim'
@@ -47,6 +46,8 @@ Plug 'edkolev/promptline.vim'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+" searching
 Plug 'srstevenson/vim-picker'
 
 call plug#end()
@@ -115,15 +116,9 @@ colorscheme jellybeans
   " Set region to British English
   set spelllang=en_gb
 
-" CtrtlP Plugin mappings
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
 " Exclude the following:
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
-
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 " better-whitespace options
 let g:strip_whitespace_on_save = 1
@@ -159,113 +154,6 @@ let g:ale_fixers = {
   \}
 let g:ale_linters_explicit = 1
 let g:ale_javascript_prettier_use_local_config = 1
-
-" Projectionist
-nnoremap <leader>k :bnext<CR>
-nnoremap <leader>l :bprevious<CR>
-
-let g:projectionist_heuristics = {
-      \ "ember-cli-build.js": {
-      \   "app/adapters/*.js": {
-      \     "alternate": "tests/unit/adapters/{}-test.js",
-      \     "type": "adapter"
-      \   },
-      \   "tests/unit/adapters/*-test.js": {
-      \     "alternate": "app/adapters/{}.js",
-      \     "type": "unit-test"
-      \   },
-      \
-      \   "app/components/*/component.js": {
-      \     "alternate": "tests/integration/components/{}-test.js",
-      \     "type": "component"
-      \   },
-      \   "tests/integration/components/*-test.js": {
-      \     "alternate": "app/components/{}/component.js",
-      \     "type": "integration-test"
-      \   },
-      \
-      \   "app/helpers/*.js": {
-      \     "alternate": "tests/unit/helpers/{}-test.js",
-      \     "type": "helper"
-      \   },
-      \   "tests/unit/helpers/*-test.js": {
-      \     "alternate": "app/helpers/{}.js",
-      \     "type": "unit-test"
-      \   },
-      \
-      \   "app/initializers/*.js": {
-      \     "alternate": "tests/unit/initializers/{}-test.js",
-      \     "type": "initializer"
-      \   },
-      \   "tests/unit/initializers/*-test.js": {
-      \     "alternate": "app/initializers/{}.js",
-      \     "type": "unit-test"
-      \   },
-      \
-      \   "app/instance-initializers/*.js": {
-      \     "alternate": "tests/unit/instance-initializers/{}-test.js",
-      \     "type": "instance-initializers"
-      \   },
-      \   "tests/unit/instance-initializers/*-test.js": {
-      \     "alternate": "app/instance-initializers/{}.js",
-      \     "type": "unit-test"
-      \   },
-      \
-      \   "app/mixins/*.js": {
-      \     "alternate": "tests/unit/mixins/{}-test.js",
-      \     "type": "mixin"
-      \   },
-      \   "tests/unit/mixins/*-test.js": {
-      \     "alternate": "app/mixins/{}.js",
-      \     "type": "unit-test"
-      \   },
-      \
-      \   "app/models/*.js": {
-      \     "alternate": "tests/unit/models/{}-test.js",
-      \     "type": "model"
-      \   },
-      \   "tests/unit/models/*-test.js": {
-      \     "alternate": "app/models/{}.js",
-      \     "type": "unit-test"
-      \   },
-      \
-      \   "app/serializers/*.js": {
-      \     "alternate": "tests/unit/serializers/{}-test.js",
-      \     "type": "serializer"
-      \   },
-      \   "tests/unit/serializers/*-test.js": {
-      \     "alternate": "app/serializers/{}.js",
-      \     "type": "unit-test"
-      \   },
-      \
-      \   "app/services/*.js": {
-      \     "alternate": "tests/unit/services/{}-test.js",
-      \     "type": "service"
-      \   },
-      \   "tests/unit/services/*-test.js": {
-      \     "alternate": "app/services/{}.js",
-      \     "type": "unit-test"
-      \   },
-      \
-      \   "app/transforms/*.js": {
-      \     "alternate": "tests/unit/transforms/{}-test.js",
-      \     "type": "transform"
-      \   },
-      \   "tests/unit/transforms/*-test.js": {
-      \     "alternate": "app/transforms/{}.js",
-      \     "type": "unit-test"
-      \   },
-      \
-      \   "tests/helpers/*.js": {"type": "test-helpers"},
-      \   "app/mirage/factories/*.js": {"type": "factory"},
-      \   "app/mirage/fixtures/*.js": {"type": "fixture"},
-      \   "app/mirage/scenarios/*.js": {"type": "scenario"},
-      \   "tests/acceptance/*.js": {"type": "acceptance-test"},
-      \   "app/*/styles.scss": {"type": "style"},
-      \   "app/*.scss": {"type": "style"},
-      \   "app/*/template.hbs": {"type": "template"},
-      \   "app/*.hbs": {"type": "template"},
-      \ }}
 
 " Rainbow Parenthese
 let g:rbpt_colorpairs = [
