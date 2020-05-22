@@ -11,7 +11,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'scrooloose/nerdcommenter'
 Plug 'christoomey/vim-tmux-navigator'
-map ,b :CtrlPBuffer<CR>
 Plug 'terryma/vim-multiple-cursors'
 Plug 'rking/ag.vim'
 Plug 'ntpeters/vim-better-whitespace'
@@ -22,12 +21,10 @@ Plug 'dense-analysis/ale'
 
 " ember specifics
 Plug 'joukevandermaas/vim-ember-hbs'
-Plug 'nullvoxpopuli/coc-ember', {'do': 'yarn install --frozen-lockfile'}
 
 " ruby and/or rails specifics
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
-Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-haml'
 Plug 'tpope/vim-cucumber'
 Plug 'tpope/vim-bundler'
