@@ -149,6 +149,17 @@ let g:coc_global_extensions = [
   \ 'coc-ember'
   \ ]
 
+
+" ALE options
+let g:ale_linters = {
+  \   'javascript': ['eslint'],
+  \}
+let g:ale_fixers = {
+  \   'javascript': ['prettier'],
+  \}
+let g:ale_linters_explicit = 1
+let g:ale_javascript_prettier_use_local_config = 1
+
 " Projectionist
 nnoremap <leader>k :bnext<CR>
 nnoremap <leader>l :bprevious<CR>
