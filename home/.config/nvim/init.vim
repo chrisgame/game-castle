@@ -133,6 +133,7 @@ let g:airline_theme = 'wombat'
 let g:coc_global_extensions = [
   \ 'coc-css',
   \ 'coc-eslint',
+  \ 'coc-tslint',
   \ 'coc-prettier',
   \ 'coc-json',
   \ 'coc-html',
@@ -140,6 +141,7 @@ let g:coc_global_extensions = [
   \ 'coc-highlight',
   \ 'coc-ember',
   \ 'coc-tailwindcss',
+  \ 'coc-tsserver',
   \ ]
 
 " Integrations
