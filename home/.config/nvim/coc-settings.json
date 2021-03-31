@@ -1,0 +1,5 @@
+{
+  "prettier.eslintIntegration": true,
+  "prettier.requireConfig": true,
+  "coc.preferences.formatOnSaveFiletypes": ["css", "javascript", "json", "typescript"]
+}
