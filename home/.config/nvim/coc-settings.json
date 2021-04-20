@@ -1,4 +1,8 @@
 {
+  "diagnostic.errorSign": "✘",
+  "diagnostic.warningSign": "⚠",
+  "diagnostic.infoSign": "ⓘ",
+
   "prettier.eslintIntegration": true,
   "prettier.requireConfig": true,
   "coc.preferences.formatOnSaveFiletypes": ["css", "javascript", "json", "typescript"],
