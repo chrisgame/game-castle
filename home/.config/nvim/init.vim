@@ -23,6 +23,18 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " ember specifics
 Plug 'joukevandermaas/vim-ember-hbs'
 
+" JavaScript Syntax
+Plug 'pangloss/vim-javascript'
+let g:javascript_plugin_jsdoc = 1
+
+" Typescript syntax
+Plug 'leafgarland/typescript-vim'
+
+" Nested syntax highlighting
+" needed for js/ts named template literals
+" and markdown.
+Plug 'Quramy/vim-js-pretty-template'
+
 " ruby and/or rails specifics
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
