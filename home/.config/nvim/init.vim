@@ -18,6 +18,7 @@ Plug  'kien/rainbow_parentheses.vim'
 
 " linting and completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'dense-analysis/ale'
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " ember specifics
@@ -154,6 +155,14 @@ let g:coc_global_extensions = [
   \ 'coc-ember',
   \ 'coc-tsserver',
   \ ]
+
+nnoremap <space>e :CocCommand explorer<CR>
+
+let g:ale_disable_lsp = 1
+let g:ale_linters_explicit = 1
+
+
+autocmd BufWritePost *.hbs silent !yarn ember-template-lint <afile> --fix
 
 " Integrations
 let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
