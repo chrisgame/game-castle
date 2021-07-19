@@ -152,7 +152,6 @@ let g:coc_global_extensions = [
   \ 'coc-vimlsp',
   \ 'coc-highlight',
   \ 'coc-ember',
-  \ 'coc-tailwindcss',
   \ 'coc-tsserver',
   \ ]
 
