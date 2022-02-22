@@ -2,23 +2,13 @@
 	email = chris.game@robbiebobbins.com
 	name = The Game
 [alias]
-  a = add
-  aa = add .
   co = checkout
   ci = commit
   cim = commit -m
   ca = commit -a --amend
-  rc = rebase --continue
-  rh = "!f() { git rebase -i HEAD~$1; }; f"
-  p = push
-  pf = push -f
-  pu = push --set-upstream origin
-  df = diff
   s = status
   st = status --short --branch
-  b = branch
   newb = checkout -b
-  plum = pull upstream master
   rum = pull --rebase upstream master
   rom = pull --rebase origin master
   l = log --pretty=format:"%C(green)%h%C(bold)%d\\ %Creset%s%C(white)\\ [%cn]" --decorate --numstat
@@ -29,3 +19,7 @@
   f = commit --amend --reset-author --no-edit
 [merge]
 	tool = vimdiff
+[core]
+        editor = vim
+[rebase]
+        autosquash = true
