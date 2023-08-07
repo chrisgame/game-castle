@@ -51,7 +51,7 @@ end
 
 def installFonts
   #https://github.com/powerline/fonts
-  unless system 'ls /Library/Fonts/Sauce\ Code\ Powerline\ Bold.otf'
+  unless system 'ls /Library/Fonts/Source\ Code\ Pro\ for\ Powerline.otf'
     puts 'Installing font'
     `curl -LOk https://github.com/powerline/fonts/archive/master.zip`
     `unzip -j "master.zip" "fonts-master/SourceCodePro\*" -d "/Library/Fonts"`
