@@ -1,3 +1,10 @@
+def installNeoVim
+  unless system 'which nvim'
+    puts 'Installing NeoVim'
+    `brew install neovim`
+  end
+end
+
 def installVundler
   unless system 'ls ~/.vim/bundle/vundle'
     puts 'Installing vundler'
@@ -56,6 +63,7 @@ def installVimPlugins
   `vim +PluginInstall +qall`
 end
 
+installNeoVim
 installVundler
 installTmux
 installZsh
