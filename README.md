@@ -54,7 +54,7 @@ homesick rc game-castle
 Install the lateset version of node for example
 
 ```
-nvm install 0.12.7
+volta install node
 ```
 
 close and then reopen the terminal and then open vim

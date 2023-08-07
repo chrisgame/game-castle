@@ -52,8 +52,6 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-source $(brew --prefix nvm)/nvm.sh
-
 # User configuration
 
 export PATH="/Users/chris/.rvm/gems/ruby-2.1.2/bin:/Users/chris/.rvm/gems/ruby-2.1.2@global/bin:/Users/chris/.rvm/rubies/ruby-2.1.2/bin:/Users/chris/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/chris/.rvm/bin"
@@ -168,3 +166,5 @@ nombom() {
 [ -f /Users/chris/.travis/travis.sh ] && source /Users/chris/.travis/travis.sh
 
 export PATH="$HOME/.yarn/bin:$PATH"
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
