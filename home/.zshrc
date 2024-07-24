@@ -54,7 +54,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/Users/chris/.rvm/gems/ruby-2.1.2/bin:/Users/chris/.rvm/gems/ruby-2.1.2@global/bin:/Users/chris/.rvm/rubies/ruby-2.1.2/bin:/Users/chris/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/chris/.rvm/bin"
+# ruby paths
+#export PATH="/Users/chris/.rvm/gems/ruby-2.1.2/bin:/Users/chris/.rvm/gems/ruby-2.1.2@global/bin:/Users/chris/.rvm/rubies/ruby-2.1.2/bin:/Users/chris/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/chris/.rvm/bin"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
