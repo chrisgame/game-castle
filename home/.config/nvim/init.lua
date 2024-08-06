@@ -175,10 +175,16 @@ local function tree_attach(bufnr)
   api.config.mappings.default_on_attach(bufnr)
 
   -- custom mappings
-  vim.keymap.set('n', '<C-a>', api.tree.find_file,        opts('Find file'))
-  vim.keymap.set('n', '<C-t>', api.tree.change_root_to_parent,        opts('Up'))
+  vim.keymap.set('n', 't', api.node.open.tab,        opts('Open in new tab'))
+  vim.keymap.set('n', 'i', api.node.open.horizontal, opts('Open in split'))
+  vim.keymap.set('n', 's', api.node.open.vertical,   opts('Open in vsplit'))
 end
 
 require("nvim-tree").setup {
+  actions = {
+    open_file = {
+      quit_on_open = true,
+    }
+  },
   on_attach = tree_attach,
 }
