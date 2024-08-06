@@ -1,3 +1,4 @@
+
 local g = vim.g       -- Global variables
 local opt = vim.opt   -- Set options (global/buffer/windows-scoped)
 
@@ -41,13 +42,25 @@ opt.synmaxcol = 240         -- Max column for syntax highlight
 -- Disable nvim intro
 opt.shortmess:append "sI"
 
+-----------------------------------------------------------
+-- Plugin management
+-----------------------------------------------------------
 require("config.lazy")
 
+-----------------------------------------------------------
+-- Key Bindings
+-----------------------------------------------------------
 g.mapleader = ","
+vim.keymap.set('n', '<C-F>', '<cmd>NvimTreeFindFileToggle<CR>', { noremap = true })
 
--- Mason for Nvim package management
+-----------------------------------------------------------
+-- Package management
+-----------------------------------------------------------
 require("mason").setup();
 
+-----------------------------------------------------------
+-- File Search
+-----------------------------------------------------------
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
@@ -93,6 +106,9 @@ require('telescope').setup{
 
 require('telescope').load_extension('fzf')
 
+-----------------------------------------------------------
+-- Completion
+-----------------------------------------------------------
 local cmp = require'cmp'
 
 cmp.setup({
@@ -144,3 +160,25 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+-----------------------------------------------------------
+-- File tree
+-----------------------------------------------------------
+local function tree_attach(bufnr)
+  local api = require "nvim-tree.api"
+
+  local function opts(desc)
+    return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+  end
+
+  -- default mappings
+  api.config.mappings.default_on_attach(bufnr)
+
+  -- custom mappings
+  vim.keymap.set('n', '<C-a>', api.tree.find_file,        opts('Find file'))
+  vim.keymap.set('n', '<C-t>', api.tree.change_root_to_parent,        opts('Up'))
+end
+
+require("nvim-tree").setup {
+  on_attach = tree_attach,
+}
