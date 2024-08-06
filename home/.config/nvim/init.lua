@@ -16,7 +16,7 @@ opt.splitright = true       -- Vertical split to the right
 opt.splitbelow = true       -- Horizontal split to the bottom
 opt.ignorecase = true       -- Ignore case letters when search
 opt.smartcase = true        -- Ignore lowercase for the whole pattern
--- opt.termguicolors = true    -- Enable 24-bit RGB colors
+opt.termguicolors = true    -- Enable 24-bit RGB colors
 opt.scrolloff = 3           -- Show N lines of context offset around the cursor
 opt.belloff = ''            -- Silence the bell for all events
 opt.visualbell = true       -- No beeping
@@ -52,6 +52,12 @@ require("config.lazy")
 -----------------------------------------------------------
 g.mapleader = ","
 vim.keymap.set('n', '<C-F>', '<cmd>NvimTreeFindFileToggle<CR>', { noremap = true })
+
+-----------------------------------------------------------
+-- Colorscheme
+-----------------------------------------------------------
+require("onedarker").setup()
+vim.cmd [[colorscheme onedarker]]
 
 -----------------------------------------------------------
 -- Package management
