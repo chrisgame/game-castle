@@ -226,3 +226,50 @@ require("nvim-tree").setup {
   },
   on_attach = tree_attach,
 }
+
+-----------------------------------------------------------
+-- Status line, tab line, win bar styling
+-----------------------------------------------------------
+require('lualine').setup {
+  options = {
+    theme = 'auto',
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
+    always_divide_middle = false,
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'branch', 'diff', 'diagnostics'},
+    lualine_c = {
+      {
+        'filename',
+        path = 1, -- relative path
+        shorting_target = 40, -- truncate at 40 characters
+      }
+    },
+    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
+  },
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {'filename'},
+    lualine_x = {'location'},
+    lualine_y = {},
+    lualine_z = {}
+  },
+  tabline = {
+    lualine_a = {
+      {
+        'tabs',
+        tab_max_length = 100,  -- Maximum width of each tab. The content will be shorten dynamically (example: apple/orange -> a/orange)
+        mode = 2, -- show tab_nr + tab_name
+        path = 1, -- show the relative path and shorten $HOME to ~
+      }
+    }
+  },
+  winbar = {},
+  inactive_winbar = {},
+  extensions = {}
+}
