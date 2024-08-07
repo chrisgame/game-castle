@@ -53,6 +53,17 @@ require("config.lazy")
 g.mapleader = ","
 vim.keymap.set('n', '<C-F>', '<cmd>NvimTreeFindFileToggle<CR>', { noremap = true })
 
+-- tabs
+vim.keymap.set('n', '<leader>tt', ':tabnew<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>te', ':tabedit<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>tc', ':tabclose<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>to', ':tabonly<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>tn', ':tabnext<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>tp', ':tabprevious<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>tf', ':tabfirst<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>tl', ':tablast<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>tm', ':tabmove<CR>', { noremap = true })
+
 --spell check
 local function toggle_spell_check()
     vim.opt.spell = not(vim.opt.spell:get())
