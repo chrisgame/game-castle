@@ -6,6 +6,7 @@ local opt = vim.opt   -- Set options (global/buffer/windows-scoped)
 -----------------------------------------------------------
 opt.clipboard = 'unnamedplus'                   -- Copy/paste to system clipboard
 opt.completeopt = 'menuone,noinsert,noselect'   -- Autocomplete options
+opt.spelllang = 'en_gb'                         -- Spell check lang
 
 -----------------------------------------------------------
 -- Neovim UI
@@ -51,6 +52,13 @@ require("config.lazy")
 -----------------------------------------------------------
 g.mapleader = ","
 vim.keymap.set('n', '<C-F>', '<cmd>NvimTreeFindFileToggle<CR>', { noremap = true })
+
+--spell check
+local function toggle_spell_check()
+    vim.opt.spell = not(vim.opt.spell:get())
+end
+
+vim.keymap.set('n', '<leader>s', toggle_spell_check, { noremap = true })
 
 -----------------------------------------------------------
 -- Colorscheme
