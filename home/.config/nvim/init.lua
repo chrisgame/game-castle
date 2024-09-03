@@ -273,3 +273,8 @@ require('lualine').setup {
   inactive_winbar = {},
   extensions = {}
 }
+
+-----------------------------------------------------------
+-- Comment toggling
+-----------------------------------------------------------
+require('Comment').setup()
