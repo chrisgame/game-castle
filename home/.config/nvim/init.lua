@@ -187,17 +187,10 @@ cmp.setup.cmdline(':', {
   matching = { disallow_symbol_nonprefix_matching = false }
 })
 
--- Set up lspconfig.
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-local lspconfig = require('lspconfig')
-
--- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'ember', 'lua_ls', 'tailwindcss', 'tsserver' }
-for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    capabilities = capabilities,
-  }
-end
+-----------------------------------------------------------
+-- Manual format
+-----------------------------------------------------------
+vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
 
 -----------------------------------------------------------
 -- File tree
