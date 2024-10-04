@@ -271,3 +271,17 @@ require("lualine").setup({
 -- Comment toggling
 -----------------------------------------------------------
 require("Comment").setup()
+
+-----------------------------------------------------------
+-- Git integration
+-----------------------------------------------------------
+require("gitsigns").setup({
+  on_attach = function()
+    local gitsigns = require("gitsigns")
+
+    vim.keymap.set("n", "<leader>hb", function()
+      gitsigns.blame_line({ full = true })
+    end, { noremap = true })
+    vim.keymap.set("n", "<leader>b", "<cmd>Gitsigns blame<CR>")
+  end,
+})
