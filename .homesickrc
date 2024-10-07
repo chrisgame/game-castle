@@ -1,3 +1,17 @@
+def installTig
+  unless system 'which tig'
+    puts 'Installing Tig'
+    `brew install tig`
+  end
+end
+
+def installNeoVim
+  unless system 'which nvim'
+    puts 'Installing NeoVim'
+    `brew install neovim`
+  end
+end
+
 def installVundler
   unless system 'ls ~/.vim/bundle/vundle'
     puts 'Installing vundler'
@@ -27,12 +41,11 @@ def installOhMyZsh
   end
 end
 
-def installNvm
-  #https://github.com/creationix/nvm
-  unless system 'brew --prefix nvm'
-    puts 'Installing nvm'
-    `brew install nvm`
-    `source ~/.bash_profile`
+def installVolta
+  #https://volta.sh/
+  unless system 'which volta'
+    puts 'Installing volta'
+    `curl https://get.volta.sh | bash`
   end
 end
 
@@ -45,7 +58,7 @@ end
 
 def installFonts
   #https://github.com/powerline/fonts
-  unless system 'ls /Library/Fonts/Sauce\ Code\ Powerline\ Bold.otf'
+  unless system 'ls /Library/Fonts/Source\ Code\ Pro\ for\ Powerline.otf'
     puts 'Installing font'
     `curl -LOk https://github.com/powerline/fonts/archive/master.zip`
     `unzip -j "master.zip" "fonts-master/SourceCodePro\*" -d "/Library/Fonts"`
@@ -57,11 +70,13 @@ def installVimPlugins
   `vim +PluginInstall +qall`
 end
 
+installTig
+installNeoVim
 installVundler
 installTmux
 installZsh
 installOhMyZsh
-installNvm
+installVolta
 installTheSilverSearcher
 installVimPlugins
 

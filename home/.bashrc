@@ -125,3 +125,5 @@
 
 # added by travis gem
 [ -f /Users/chris/.travis/travis.sh ] && source /Users/chris/.travis/travis.sh
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"

@@ -1,0 +1,1 @@
+return { "lunarvim/onedarker.nvim" }
